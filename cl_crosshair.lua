@@ -238,6 +238,10 @@ AddEventHandler("cookcrosshair:reset", function()
 	ResetDatas()
 end)
 
+RegisterNetEvent('cookcrosshair:toPlayer')
+AddEventHandler('cookcrosshair:toPlayer', function(style) 
+	TriggerEvent("cookcrosshair:active", style)
+end)
 
 -- Commands
 RegisterCommand('crosse', function(source, args)
